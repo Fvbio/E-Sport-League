@@ -48,7 +48,7 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
       if (response.status === 201) {
         console.log('Inscription réussie !');
         // history.push('../Tournament'); // Remplacez '/nouvelle-page' par la route de la nouvelle page
-        navigate('/tournament');
+        navigate('/tournoi');
       } else {
         console.error('Erreur lors de l\'inscription');
       }
