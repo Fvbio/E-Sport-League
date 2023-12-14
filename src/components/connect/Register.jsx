@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+// import * as ReactRouterDom from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [acceptConditions, setAcceptConditions] = useState(false);
+//   const history = ReactRouterDom.useHistory();
+const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
+
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -40,6 +47,8 @@ const Register = () => {
       // Vérifier si la requête a réussi (code 201 pour création réussie)
       if (response.status === 201) {
         console.log('Inscription réussie !');
+        // history.push('../Tournament'); // Remplacez '/nouvelle-page' par la route de la nouvelle page
+        navigate('/tournament');
       } else {
         console.error('Erreur lors de l\'inscription');
       }
