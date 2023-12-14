@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
     return <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/inscription"}>Inscription</Link>
+        <Link to={"/tournoi"}> TOURNOI </Link>
+        <Link to={"/jeux"}> JEUX </Link>
+
 
     </nav>;
 }
