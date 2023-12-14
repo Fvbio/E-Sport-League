@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,14 +11,23 @@
     },
     {
       "title": "Rocket League",
+=======
+{
+  "game": [
+      { "title": "Rocket League",
+>>>>>>> 9a2c0c327bba2a3ad5865940a5950eb7ab6a95cf
       "picture": "../public/pictures/rocket_league.jpg",
       "link": "contact.html",
-      "description": "Affiche Rocket League"
-    },
-    {
-      "title": "League Of Legend",
+      "description": "Affiche Rocket League" },
+
+      { "title": "Fortnite",
+      "picture": "../public/pictures/fortnite.jpg",
+      "link": "skills.html",
+      "description": "Affiche Fortnite"},
+
+      { "title": "League Of Legend",
       "picture": "../public/pictures/lol.jpg",
       "link": "contact.html",
-      "description": "Affiche League Of Legend"
-    }
+      "description": "Affiche League Of Legend" }
   ]
+}
