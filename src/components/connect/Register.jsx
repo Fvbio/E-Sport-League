@@ -1,22 +1,3 @@
-// const Register = () => {
-//     return <>
-// <form class="box" action="#" method="post">
-//         <svg width="30" height="30" viewBox="0 0 24 24">
-//             <path
-//                 d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z">
-//             </path>
-//         </svg>
-//         <h1>Créer un compte</h1>
-//         <input type="text" name="email" placeholder="Votre Email"/>
-//         <input type="password" name="password" placeholder="Votre Mot De Passe"/>
-//         <input type="checkbox" id="conditions" name="conditions"/>
-//         <label for="conditions" class="conditions-label">Accepter les conditions d'utilisation</label>
-//         <input type="submit" name="submit" value="Créer le compte"/>
-//     </form>    </>
-// }
-
-// export default Register;
-
 import React, { useState } from 'react';
 
 const Register = () => {
@@ -36,12 +17,35 @@ const Register = () => {
     setAcceptConditions(e.target.checked);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour gérer la soumission du formulaire
-    console.log('Email:', email);
-    console.log('Mot de passe:', password);
-    console.log('Conditions acceptées:', acceptConditions);
+
+    // Créer un objet représentant les données du formulaire
+    const formData = {
+      email,
+      password,
+      acceptConditions,
+    };
+
+    try {
+      // Effectuer une requête POST vers le serveur JSON
+      const response = await fetch('http://localhost:3000/users', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+});
+
+      // Vérifier si la requête a réussi (code 201 pour création réussie)
+      if (response.status === 201) {
+        console.log('Inscription réussie !');
+      } else {
+        console.error('Erreur lors de l\'inscription');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la requête POST', error);
+    }
   };
 
   return (
