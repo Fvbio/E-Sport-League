@@ -1,3 +1,4 @@
+import Tournament from './Tournament';
 import Form from './connect/Form';
 import Register from './connect/Register';
 

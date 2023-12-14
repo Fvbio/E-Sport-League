@@ -72,3 +72,26 @@ svg {
 .box .conditions-label {
   color: white;
 }
+
+
+
+
+
+/* Style pour l'élément conteneur des images */
+.Tournament {
+  display: flex; /* Affiche les images en ligne */
+  justify-content: space-around; /* Répartit l'espace autour des images */
+  flex-wrap: wrap; /* Passe à la ligne si l'espace est insuffisant */
+}
+
+/* Style pour chaque article/image */
+.Tournament article {
+  width: 30%; /* Largeur de chaque groupe d'images */
+  margin: 10px; /* Marge autour de chaque groupe d'images */
+}
+
+/* Style pour chaque image */
+.Tournament img {
+  width: 100%; /* Taille de l'image à 100% de la largeur de l'article */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
+}
