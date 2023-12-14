@@ -10,7 +10,7 @@ const Form = () => {
         <input type="password" name="" placeholder="Votre Mot De Passe" />
         <div class="buttons-container">
           <input type="submit" formaction="Game.jsx" value="Connexion" />
-          <input type="submit" formaction="creation.html" value="Créer un compte"/>
+          <input type="submit" formaction="Register.jsx" value="Créer un compte"/>
         </div>
       </form>
     </>
