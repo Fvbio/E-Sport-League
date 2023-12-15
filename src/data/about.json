@@ -1,0 +1,18 @@
+{
+  "game": [
+      { "title": "Rocket League",
+      "picture": "../public/pictures/rocket_league.jpg",
+      "link": "contact.html",
+      "description": "Affiche Rocket League" },
+
+      { "title": "Fortnite",
+      "picture": "../public/pictures/fortnite.jpg",
+      "link": "skills.html",
+      "description": "Affiche Fortnite"},
+
+      { "title": "League Of Legend",
+      "picture": "../public/pictures/lol.jpg",
+      "link": "contact.html",
+      "description": "Affiche League Of Legend" }
+  ]
+}
