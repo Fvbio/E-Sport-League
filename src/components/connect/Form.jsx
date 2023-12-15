@@ -20,10 +20,14 @@
 // export default Form;
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Form = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
+
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -39,6 +43,12 @@ const Form = () => {
     console.log('Nom d\'utilisateur:', username);
     console.log('Mot de passe:', password);
   };
+
+  const handleCreerCompteClick = () => {
+    // Redirection vers la page d'inscription
+    navigate('/inscription'); // Assurez-vous que la route '/inscription' est correctement configurée dans votre routeur
+  };
+
 
   return (
     <>
@@ -64,7 +74,7 @@ const Form = () => {
         <div className="buttons-container">
           <input type="submit" value="Connexion" />
           {/* Notez que formaction n'est pas utilisé ici. Utilisez onSubmit pour gérer la soumission du formulaire. */}
-          <input type="submit" value="Créer un compte"/>
+          <input type="submit" value="Créer un compte" onClick={handleCreerCompteClick} />
         </div>
       </form>
     </>
