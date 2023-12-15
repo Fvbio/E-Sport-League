@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-
-
-
-[
-    {
-      "title": "Fortnite",
-      "picture": "../public/pictures/fortnite.jpg",
-      "link": "skills.html",
-      "description": "Affiche Fortnite"
-    },
-    {
-      "title": "Rocket League",
-=======
 {
   "game": [
       { "title": "Rocket League",
->>>>>>> 9a2c0c327bba2a3ad5865940a5950eb7ab6a95cf
       "picture": "../public/pictures/rocket_league.jpg",
       "link": "contact.html",
       "description": "Affiche Rocket League" },
