@@ -27,7 +27,7 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Créer un objet représentant les données du formulaire
+    // objet représentant les données du formulaire
     const formData = {
       email,
       password,
@@ -35,7 +35,7 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
     };
 
     try {
-      // Effectuer une requête POST vers le serveur JSON
+      // requête POST vers le serveur JSON
       const response = await fetch('http://localhost:3000/users', {
     method: 'POST',
     headers: {
@@ -44,10 +44,9 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
   body: JSON.stringify(formData),
 });
 
-      // Vérifier si la requête a réussi (code 201 pour création réussie)
+      // Vérifier si la requête a réussi 
       if (response.status === 201) {
         console.log('Inscription réussie !');
-        // history.push('../Tournament'); // Remplacez '/nouvelle-page' par la route de la nouvelle page
         navigate('/tournoi');
       } else {
         console.error('Erreur lors de l\'inscription');
