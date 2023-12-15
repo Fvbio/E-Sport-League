@@ -1,32 +1,12 @@
-// const Form = () => {
-//   return (
-//     <>
-//       <form class="box">
-//         <svg width="30" height="30" viewBox="0 0 24 24">
-//           <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
-//         </svg>
-//         <h1>Connexion</h1>
-//         <input type="text" name="" placeholder="Votre Nom d'utilisateur" />
-//         <input type="password" name="" placeholder="Votre Mot De Passe" />
-//         <div class="buttons-container">
-//           <input type="submit" formaction="Game.jsx" value="Connexion" />
-//           <input type="submit" formaction="Register.jsx" value="Créer un compte"/>
-//         </div>
-//       </form>
-//     </>
-//   );
-// };
-
-// export default Form;
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 
 
 const Form = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
+  const navigate = useNavigate(); 
 
 
   const handleUsernameChange = (e) => {
@@ -37,18 +17,42 @@ const Form = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour gérer la soumission du formulaire
-    console.log('Nom d\'utilisateur:', username);
-    console.log('Mot de passe:', password);
+  
+    try {
+      // Effectuer une requête POST pour la connexion
+      const response = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }), 
+      });
+  
+      if (response.ok) {
+        // Si la réponse du serveur est OK, gérer la connexion réussie ici
+        console.log('Connexion réussie');
+        navigate('/tournoi'); 
+      } else {
+        // Si la réponse du serveur n'est pas OK, gérer l'échec de la connexion ici
+        console.log('Échec de la connexion');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la connexion', error);
+    }
   };
-
-  const handleCreerCompteClick = () => {
+  
+  const onClickInscription = () => {
     // Redirection vers la page d'inscription
-    navigate('/inscription'); // Assurez-vous que la route '/inscription' est correctement configurée dans votre routeur
+    navigate('/inscription'); 
   };
 
+  const onClickConnexion = () => {
+    // Redirection vers la page d'inscription
+    navigate('/tournoi'); 
+  };
 
   return (
     <>
@@ -73,8 +77,8 @@ const Form = () => {
         />
         <div className="buttons-container">
           <input type="submit" value="Connexion" />
-          {/* Notez que formaction n'est pas utilisé ici. Utilisez onSubmit pour gérer la soumission du formulaire. */}
-          <input type="submit" value="Créer un compte" onClick={handleCreerCompteClick} />
+
+          <input type="submit" value="Créer un compte" onClick={onClickInscription} />
         </div>
       </form>
     </>
