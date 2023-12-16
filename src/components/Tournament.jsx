@@ -22,7 +22,7 @@ const Tournament = () => {
           <article className={value.title} key={index}>
             <a href={value.link}>
               <h4 className="about-item-title">{value.title}</h4>
-              <img src={value.picture} alt={value.description} />
+              <img src={value.picture} alt={value.alt} />
             </a>
           </article>
         );

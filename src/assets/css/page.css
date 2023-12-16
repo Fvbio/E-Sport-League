@@ -1,0 +1,26 @@
+/* Styles spécifiques à la page de jeu Fortnite */
+
+/* Exemple de styles pour le header */
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    /* color: #333; */
+}
+
+/* Styles pour le contenu principal */
+main {
+    padding: 20px;
+    /* Ajoute ici les styles pour le contenu principal de Fortnite */
+}
+
+/* Styles pour le footer si nécessaire */
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}

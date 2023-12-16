@@ -12,7 +12,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <Home />
+                element: <Home />,
             },
             {
                 path: '/inscription',
@@ -20,10 +20,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/tournoi',
-                element: <Tournament/>
-
+                element: <Tournament/>,
             },
-            
+            {
+                path: '/jeu',
+                element: <Game/>,
+            }
 
             
         ],

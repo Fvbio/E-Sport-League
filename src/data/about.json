@@ -2,17 +2,17 @@
   "game": [
       { "title": "Rocket League",
       "picture": "../public/pictures/rocket_league.jpg",
-      "link": "contact.html",
-      "description": "Affiche Rocket League" },
+      "link": "rocket_league.html",
+      "alt": "Affiche Rocket League" },
 
       { "title": "Fortnite",
       "picture": "../public/pictures/fortnite.jpg",
-      "link": "skills.html",
-      "description": "Affiche Fortnite"},
+      "link": "fortnite.html",
+      "alt": "Affiche Fortnite"},
 
       { "title": "League Of Legend",
       "picture": "../public/pictures/lol.jpg",
-      "link": "contact.html",
-      "description": "Affiche League Of Legend" }
+      "link": "lol.html",
+      "alt": "Affiche League Of Legend" }
   ]
 }

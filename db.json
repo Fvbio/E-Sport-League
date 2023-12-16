@@ -129,6 +129,12 @@
       "username": "zzegz",
       "password": "erberber",
       "id": 22
+    },
+    {
+      "email": "esteban@gmail.com",
+      "password": "gohiejkld",
+      "acceptConditions": true,
+      "id": 23
     }
   ],
   "game": [
