@@ -3,6 +3,7 @@ import RootLayout from '../layouts/RootLayout'
 import Home from '../components/Home'
 import Register from '../components/connect/Register'
 import Tournament from '../components/Tournament'
+import InfoTournois from '../components/infoTournois'
 
 
 const router = createBrowserRouter([
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
                 element: <Tournament/>,
             },
             {
-                path: '/jeu',
-                element: <Game/>,
+                path: '/tournoi/:gameName',
+                element: <InfoTournois/>,
             }
 
             

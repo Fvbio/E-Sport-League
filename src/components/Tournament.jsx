@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const Tournament = () => {
   const [data, setData] = useState([]);
@@ -20,10 +22,10 @@ const Tournament = () => {
       {data.map((value, index) => {
         return (
           <article className={value.title} key={index}>
-            <a href={value.link}>
+            <Link to={`/tournoi/${value.title.toLowerCase().replace(/\s+/g, '-')}`}>
               <h4 className="about-item-title">{value.title}</h4>
               <img src={value.picture} alt={value.alt} />
-            </a>
+            </Link>
           </article>
         );
       })}

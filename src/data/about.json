@@ -1,18 +1,25 @@
 {
   "game": [
-      { "title": "Rocket League",
+    {
+      "id": 1,
+      "title": "Rocket League",
       "picture": "../public/pictures/rocket_league.jpg",
-      "link": "rocket_league.html",
-      "alt": "Affiche Rocket League" },
-
-      { "title": "Fortnite",
+      "link": "/tournoi/rocket-league", 
+      "alt": "Affiche Rocket League"
+    },
+    {
+      "id": 2,
+      "title": "Fortnite",
       "picture": "../public/pictures/fortnite.jpg",
-      "link": "fortnite.html",
-      "alt": "Affiche Fortnite"},
-
-      { "title": "League Of Legend",
+      "link": "/tournoi/fortnite",
+      "alt": "Affiche Fortnite"
+    },
+    {
+      "id": 3,
+      "title": "League Of Legend",
       "picture": "../public/pictures/lol.jpg",
-      "link": "lol.html",
-      "alt": "Affiche League Of Legend" }
+      "link": "/tournoi/league-of-legend",
+      "alt": "Affiche League Of Legend"
+    }
   ]
 }
