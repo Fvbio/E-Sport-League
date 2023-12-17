@@ -1,19 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 import "./assets/css/style.css";
 
-import Home from './components/Home'
+import Home from "./components/Home";
 
-import { RouterProvider } from 'react-router-dom';
-import router from './service/router';
-
-
-
-// const App = () => <RouterProvider router={ router } />;
+import { RouterProvider } from "react-router-dom";
+import router from "./service/router";
 
 function App() {
-  return <RouterProvider router={ router } />
-
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

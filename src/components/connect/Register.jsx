@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-// import * as ReactRouterDom from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [acceptConditions, setAcceptConditions] = useState(false);
-//   const history = ReactRouterDom.useHistory();
-const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
-
-
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -27,7 +22,6 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // objet représentant les données du formulaire
     const formData = {
       email,
       password,
@@ -36,23 +30,23 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
 
     try {
       // requête POST vers le serveur JSON
-      const response = await fetch('http://localhost:3000/users', {
-    method: 'POST',
-    headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(formData),
-});
+      const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Vérifier si la requête a réussi 
+      // Vérifier si la requête a réussi
       if (response.status === 201) {
-        console.log('Inscription réussie !');
-        navigate('/tournoi');
+        console.log("Inscription réussie !");
+        navigate("/tournoi");
       } else {
-        console.error('Erreur lors de l\'inscription');
+        console.error("Erreur lors de l'inscription");
       }
     } catch (error) {
-      console.error('Erreur lors de la requête POST', error);
+      console.error("Erreur lors de la requête POST", error);
     }
   };
 
@@ -84,7 +78,9 @@ const navigate = useNavigate(); // Utilisez useNavigate au lieu de useHistory
           checked={acceptConditions}
           onChange={handleConditionsChange}
         />
-        <label htmlFor="conditions" className="conditions-label">Accepter les conditions d'utilisation</label>
+        <label htmlFor="conditions" className="conditions-label">
+          Accepter les conditions d'utilisation
+        </label>
         <input type="submit" name="submit" value="Créer le compte" />
       </form>
     </>

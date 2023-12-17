@@ -1,12 +1,13 @@
-import Nav from '../components/Nav';
-import { Outlet } from 'react-router-dom';
+import Nav from "../components/Nav";
+import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
-    return <>
-        <Nav />
-        <h1>Root</h1>
-        <Outlet />
-    </>;
-}
+  return (
+    <>
+      <Nav />
+      <Outlet />
+    </>
+  );
+};
 
 export default RootLayout;

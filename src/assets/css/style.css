@@ -73,25 +73,45 @@ svg {
   color: white;
 }
 
-
-
-
-
-/* Style pour l'élément conteneur des images */
 .Tournament {
-  display: flex; /* Affiche les images en ligne */
-  justify-content: space-around; /* Répartit l'espace autour des images */
-  flex-wrap: wrap; /* Passe à la ligne si l'espace est insuffisant */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-/* Style pour chaque article/image */
 .Tournament article {
-  width: 30%; /* Largeur de chaque groupe d'images */
-  margin: 10px; /* Marge autour de chaque groupe d'images */
+  width: 30%;
+  margin: 10px;
 }
 
-/* Style pour chaque image */
 .Tournament img {
-  width: 100%; /* Taille de l'image à 100% de la largeur de l'article */
-  height: auto; /* Hauteur automatique pour conserver les proportions */
+  width: 100%;
+  height: auto;
+}
+
+.tournament-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.title-image {
+  text-align: center;
+}
+
+.tournament-image {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.details h3 {
+  margin-bottom: 10px;
 }

@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; 
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate(); 
-
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -17,41 +14,40 @@ const Form = () => {
     setPassword(e.target.value);
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       // Effectuer une requête POST pour la connexion
-      const response = await fetch('http://localhost:3000/users', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }), 
+        body: JSON.stringify({ username, password }),
       });
-  
+
       if (response.ok) {
         // Si la réponse du serveur est OK, gérer la connexion réussie ici
-        console.log('Connexion réussie');
-        navigate('/tournoi'); 
+        console.log("Connexion réussie");
+        navigate("/tournoi");
       } else {
         // Si la réponse du serveur n'est pas OK, gérer l'échec de la connexion ici
-        console.log('Échec de la connexion');
+        console.log("Échec de la connexion");
       }
     } catch (error) {
-      console.error('Erreur lors de la connexion', error);
+      console.error("Erreur lors de la connexion", error);
     }
   };
-  
+
   const onClickInscription = () => {
     // Redirection vers la page d'inscription
-    navigate('/inscription'); 
+    navigate("/inscription");
   };
 
   const onClickConnexion = () => {
     // Redirection vers la page d'inscription
-    navigate('/tournoi'); 
+    navigate("/tournoi");
   };
 
   return (
@@ -78,7 +74,11 @@ const Form = () => {
         <div className="buttons-container">
           <input type="submit" value="Connexion" />
 
-          <input type="submit" value="Créer un compte" onClick={onClickInscription} />
+          <input
+            type="submit"
+            value="Créer un compte"
+            onClick={onClickInscription}
+          />
         </div>
       </form>
     </>
@@ -86,4 +86,3 @@ const Form = () => {
 };
 
 export default Form;
-

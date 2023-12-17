@@ -131,40 +131,44 @@
       "id": 22
     },
     {
-      "email": "esteban@gmail.com",
-      "password": "gohiejkld",
-      "acceptConditions": true,
+      "username": "tata@gmail.com",
+      "password": "ZOUBIDA",
       "id": 23
-    },
-    {
-      "username": "tata@gmail.com",
-      "password": "ZOUBIDA",
-      "id": 24
-    },
-    {
-      "username": "tata@gmail.com",
-      "password": "ZOUBIDA",
-      "id": 25
     }
   ],
   "game": [
     {
+      "id": 1,
       "title": "Rocket League",
-      "picture": "../public/pictures/rocket_league.jpg",
-      "link": "contact.html",
-      "description": "Affiche Rocket League"
+      "picture": "/public/pictures/rocket_league.jpg",
+      "link": "/infoTournoi/1",
+      "alt": "Affiche Rocket League",
+      "date": "2023-05-20",
+      "description": "Rocket League est un jeu vidéo de sport automobile édité et développé par Psyonix.",
+      "address": "123 Main Street, City, Country",
+      "schedule": "De 10h à 16h"
     },
     {
+      "id": 2,
       "title": "Fortnite",
-      "picture": "../public/pictures/fortnite.jpg",
-      "link": "skills.html",
-      "description": "Affiche Fortnite"
+      "picture": "/public/pictures/fortnite.jpg",
+      "link": "/infoTournoi/2",
+      "alt": "Affiche Fortnite",
+      "date": "2023-06-15",
+      "description": "Fortnite est un jeu vidéo de survie et de construction en coopération développé par Epic Games.",
+      "address": "456 Oak Avenue, City, Country",
+      "schedule": "De 12h à 18h"
     },
     {
+      "id": 3,
       "title": "League Of Legend",
-      "picture": "../public/pictures/lol.jpg",
-      "link": "contact.html",
-      "description": "Affiche League Of Legend"
+      "picture": "/public/pictures/lol.jpg",
+      "link": "/infoTournoi/3",
+      "alt": "Affiche League Of Legend",
+      "date": "2023-07-10",
+      "description": "League of Legends est un jeu vidéo de type arène de bataille en ligne multijoueur développé et édité par Riot Games.",
+      "address": "789 Elm Street, City, Country",
+      "schedule": "De 14h à 20h"
     }
   ]
 }
